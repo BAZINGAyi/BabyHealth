@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnChartGestureLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         chart = (LineChart) findViewById(R.id.chart);
         click = (Button)findViewById(R.id.returnChart);
         click.setOnClickListener(new View.OnClickListener() {
@@ -46,43 +47,86 @@ public class MainActivity extends AppCompatActivity implements OnChartGestureLis
 
             }
         });
+
         initdatas();
+
+        initChart();
+
+    }
+
+    private void initChart() {
+
         LineDataSet dataSet = new LineDataSet(entries, "温度变化");
         LineData lineData = new LineData(dataSet);
         chart.setData(lineData);
         chart.setOnChartGestureListener(this);
-      //  chart.setScaleXEnabled(false);//禁止x轴方向的变化
-        chart.setDoubleTapToZoomEnabled(true);//双击是否放大
-        chart.setHighlightPerDragEnabled(false); //设置高亮的连续可拖动的突出显示
-        chart.setHighlightPerTapEnabled(true);  //设置每次点击显示高亮
-        chart.setMaxHighlightDistance(1000); //设置选择高亮的区域范围
+        //chart.setScaleXEnabled(false);           //禁止x轴方向的变化
+        chart.setDoubleTapToZoomEnabled(true);      //双击是否放大
+        chart.setHighlightPerDragEnabled(false);    //设置高亮的连续可拖动的突出显示
+        chart.setHighlightPerTapEnabled(true);      //设置每次点击显示高亮
+        chart.setMaxHighlightDistance(1000);        //设置选择高亮的区域范围
 
 
-        dataSet.setHighlightEnabled(true);   //设置对数据集显示高亮
+        dataSet.setHighlightEnabled(true);          //设置对数据集显示高亮
         dataSet.setDrawHighlightIndicators(true);
         dataSet.setColors(Color.RED);
         dataSet.setCircleColor(Color.BLUE);
-        dataSet.setHighLightColor(Color.BLACK);
-        dataSet.setDrawValues(true);//显示值
+        dataSet.setHighLightColor(Color.GREEN);      //设置高亮的颜色
+        dataSet.setDrawValues(true);                 //高亮的点显示值
 
-        Highlight highlight = new Highlight(500f, 0,0);
-
+        //设置显示高亮的默认值
+        Highlight highlight = new Highlight(100f, 0,0);
         chart.highlightValue(highlight, false);
 
+        //设置横轴
         drawAxis();
 
         chart.invalidate(); // refresh
-
     }
 
     private void drawAxis() {
+        //设置横轴
         YAxis leftAxis =  chart.getAxisRight();
-        LimitLine ll = new LimitLine(140f, "警戒温度");
+        LimitLine ll = new LimitLine(140f, "高烧报警");
         ll.setLineColor(Color.RED);
-        ll.setLineWidth(4f);
+        ll.setLineWidth(2f);
         ll.setTextColor(Color.BLACK);
         ll.setTextSize(12f);
         leftAxis.addLimitLine(ll);
+
+        YAxis leftAxis1 =  chart.getAxisLeft();
+        LimitLine ll1 = new LimitLine(40f, "低烧报警");
+        ll1.setLineColor(Color.RED);
+        ll1.setLineWidth(2f);
+        ll1.setTextColor(Color.BLACK);
+        ll1.setTextSize(12f);
+        leftAxis1.addLimitLine(ll1);
+
+        //YAxis left = chart.getAxisLeft();
+        //left.setDrawLabels(false); // no axis labels
+       // left.setDrawAxisLine(false); // no axis line
+      //  left.setDrawGridLines(false); // no grid lines
+      //  left.setDrawZeroLine(true); // draw a zero line
+        chart.getAxisLeft().setEnabled(true); // no right axis
+        chart.getAxisRight().setEnabled(false); // no right axis
+
+
+        //设置纵轴
+//        XAxis leftAxis2 = chart.getXAxis();
+//        LimitLine ll2 = new LimitLine(20f, "低烧报警");
+//        ll2.setLineColor(Color.RED);
+//        ll2.setLineWidth(4f);
+//        ll2.setTextColor(Color.BLACK);
+//        ll2.setTextSize(12f);
+//        leftAxis2.addLimitLine(ll2);
+
+//        XAxis xAxis = chart.getXAxis();
+//        xAxis.setPosition(XAxis.XAxisPosition.TOP);
+//        xAxis.setTextColor(Color.BLUE);
+//        xAxis.setTextSize(10f);
+//        xAxis.setTextColor(Color.BLACK);
+//        xAxis.setDrawAxisLine(true);
+//        xAxis.setDrawGridLines(false);
 
     }
 
