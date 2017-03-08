@@ -3,7 +3,6 @@ package com.example.bazinga.babyhealth;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.LimitLine;
-import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
@@ -22,13 +20,7 @@ import com.github.mikephil.charting.listener.*;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import static android.R.attr.entries;
-import static android.R.attr.factor;
-import static com.example.bazinga.babyhealth.R.id.chart;
 
 public class MainActivity extends AppCompatActivity implements OnChartGestureListener {
     private  List<Entry> entries = new ArrayList<Entry>();
@@ -37,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements OnChartGestureLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_wendu);
 
         chart = (LineChart) findViewById(R.id.chart);
         click = (Button)findViewById(R.id.returnChart);

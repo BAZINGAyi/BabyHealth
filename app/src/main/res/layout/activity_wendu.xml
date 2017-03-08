@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bazinga.babyhealth.MainActivity">
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_weight="6"
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:gravity="center"
+               android:text="最近测量时间:"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <TextView
+               android:paddingLeft="2dp"
+               android:gravity="center_vertical"
+               android:text="1-2 23:22"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:text="平均温度:"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="35.5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/returnChart"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+</LinearLayout>
