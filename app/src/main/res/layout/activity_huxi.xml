@@ -54,7 +54,7 @@
 
             <TextView
                 android:gravity="center"
-                android:text="平均温度:"
+                android:text="平均呼吸频率:"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent" />
