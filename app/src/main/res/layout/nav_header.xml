@@ -9,13 +9,14 @@
         android:id="@+id/icon_image"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@mipmap/health"
         android:layout_centerInParent="true"/>
 
     <TextView
         android:id="@+id/mail"
         android:layout_alignParentBottom="true"
-        android:text="dsddsd"
+        android:text="570146800@qq.com"
+        android:layout_marginTop="20dp"
         android:textColor="#FFF"
         android:textSize="14sp"
         android:layout_width="wrap_content"
@@ -23,7 +24,7 @@
 
     <TextView
         android:id="@+id/username"
-        android:text="12313123dsddsd"
+        android:text="宝健康团队，呵护您的宝宝"
         android:layout_above="@id/mail"
         android:textColor="#FFF"
         android:textSize="14sp"

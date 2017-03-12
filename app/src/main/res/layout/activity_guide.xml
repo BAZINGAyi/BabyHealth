@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <Button
+        android:id="@+id/connectButton"
+        android:text="设备未连接"
+        android:background="@drawable/home_widget1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:elevation="4dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:background="@drawable/home_widget1"
+        android:id="@+id/setAlarm"
+        android:layout_below="@+id/connectButton"
+        android:layout_alignParentLeft="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <Button
+        android:background="@drawable/home_widget1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/connectButton"
+        />
+
+
+</RelativeLayout>

@@ -7,18 +7,41 @@
     android:layout_margin="15dp"
     android:background="#8000">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:text="生活建议"
-        android:textColor="#fff"
-        android:textSize="20sp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="生活建议"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/recommend_more"
+            android:background="#0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="更多"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+
+
+    </LinearLayout>
 
     <TextView
-        android:text="在人的生长发育过程中，共有两次生长高峰——婴儿期和青春前期。影响孩子身高的因素很多，
-        主要有遗传因素和后天因素两大类。其中，遗传因素占70%～80%，非外力所能改变。也就是说，如果父母都不
+        android:text="在人的生长发育过程中，共有两次生长高峰——婴儿期和青春前期。影响孩子身高的因素很多，主要有遗传因素和后天因素两大类。其中，遗传因素占70%～80%，非外力所能改变。也就是说，如果父母都不
         高大，孩子将来一般也不会很高大。"
         android:id="@+id/comfort_text"
         android:layout_width="wrap_content"
@@ -27,9 +50,7 @@
         android:textColor="#fff" />
 
     <TextView
-        android:text="在人的生长发育过程中，共有两次生长高峰——婴儿期和青春前期。影响孩子身高的因素很多，
-        主要有遗传因素和后天因素两大类。其中，遗传因素占70%～80%，非外力所能改变。也就是说，如果父母都不
-        高大，孩子将来一般也不会很高大。"
+        android:text="孩子对妈妈的依恋是一件非常复杂的事情，基本上在孩子生病或疲劳时会非常依恋妈妈，这时候妈妈也会一直陪伴在孩子身边。这种母子依恋对于孩子来说是非常有利的，可是也有一些孩子，除了自己的妈妈外，对其他人都很排斥，这样下去总是会让妈妈觉得非常累，出现这种情况就是因为孩子对妈妈过分依恋。过分的依恋对于孩子发展有着很多不利的影响，过分依恋妈妈，会让孩子对别的事物缺少兴趣、会阻碍兴趣爱好的发展，孩子会减少和别人相处的机会。在孩子上学了以后，也会非常不适应，还容易生病，这对孩子来说是非常不好的。"
         android:id="@+id/car_wash_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,9 +58,8 @@
         android:textColor="#fff" />
 
     <TextView
-        android:text="在人的生长发育过程中，共有两次生长高峰——婴儿期和青春前期。影响孩子身高的因素很多，
-        主要有遗传因素和后天因素两大类。其中，遗传因素占70%～80%，非外力所能改变。也就是说，如果父母都不
-        高大，孩子将来一般也不会很高大。"
+        android:text="一个三岁的孩子可能不知道什么原因就会一下子表现出愤怒的样子，大多数的时候孩子表现出愤怒的时机都是不合时宜的。爸爸妈妈会注意到，三岁的宝宝总是莫名其妙就会愤怒，可能是因为与其他儿童或成人玩游戏、可能是因为生活小事，都会导致孩子大发脾气。
+爸爸妈妈要明白的是，一个孩子发脾气是很正常的，孩子现在还控制不好自己的情绪，他（她）会控制不住地摔打东西，或许会打别人、也可能会不听你的话，不做你要求他（她）做的事情。孩子的这些动作是说明他（她）想要独立的意愿，可是现在还没有办法完全表达出来。爸爸妈妈要让孩子明白，这样的愤怒是非常不好的，要好好学习区别“对错”，因此一定要支持孩子的好的行为，要让孩子及时把错误的行为改正。并且，让孩子有一个正确的方式表达他（她）的愤怒。"
         android:id="@+id/sport_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -4,25 +4,21 @@
     <group
         android:checkableBehavior="single">
 
-        <item android:id="@+id/nav_call"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Call"/>
+        <item android:id="@+id/nav_data"
+            android:icon="@mipmap/data"
+            android:title="数据"/>
 
-        <item android:id="@+id/nav_call1"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Call"/>
+        <item android:id="@+id/nav_output"
+            android:icon="@mipmap/output"
+            android:title="历史数据导出"/>
 
-        <item android:id="@+id/nav_call2"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Call"/>
+        <item android:id="@+id/nav_recommend"
+            android:icon="@mipmap/recommend"
+            android:title="育婴推荐"/>
 
-        <item android:id="@+id/nav_call3"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Call"/>
-
-        <item android:id="@+id/nav_call4"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Call"/>
+        <item android:id="@+id/nav_about"
+            android:icon="@mipmap/about"
+            android:title="关于"/>
 
     </group>
 

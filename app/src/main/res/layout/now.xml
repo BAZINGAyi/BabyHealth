@@ -17,7 +17,7 @@
 
     <TextView
         android:text="当前温度正常"
-        android:id="@+id/weather_info_text"
+        android:id="@+id/info_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
