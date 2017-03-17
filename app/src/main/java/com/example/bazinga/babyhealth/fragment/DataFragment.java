@@ -21,9 +21,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.bazinga.babyhealth.R;
-import com.example.bazinga.babyhealth.service.DrawTemperatureService;
-import com.example.bazinga.babyhealth.service.LongRunningService;
-import com.example.bazinga.babyhealth.ui.ContentActivity;
+
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
